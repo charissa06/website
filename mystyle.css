@@ -1,0 +1,793 @@
+/* ==========================================================
+   🌸 BERANDA — PASTEL WELCOME EDITION
+   ========================================================== */
+/* ====== GAYA DASAR ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #fbe8eb, #d8ecf3);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ====== NAVBAR ====== */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(90deg, #ffc0cb, #a0e7ff);
+  padding: 20px;
+  border-bottom: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+nav::before,
+nav::after {
+  content: "🌸🍒";
+  position: absolute;
+  font-size: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav::before { left: 10px; }
+nav::after { right: 10px; }
+
+nav h2 {
+  margin: 0;
+  color: #003366;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 15px 0 0;
+  gap: 12px;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 8px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffc0cb, #a0e7ff);
+  color: #003366;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ffb6c1, #90d4f0);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+nav ul li a::before {
+  content: "🌸";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+nav ul li a::after {
+  content: "🍒";
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  transform: translateY(-50%) scale(1.3);
+  opacity: 1;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero .logo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2em;
+  color: #444;
+}
+
+.hero p {
+  color: #555;
+  margin: 5px 0;
+}
+
+/* ====== FOTO ALBUM ====== */
+.album {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(255,255,255,0.8);
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.album h2 {
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.album-item img {
+  width: 100%;
+  max-width: 280px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.album-item img:hover {
+  transform: scale(1.05);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: linear-gradient(90deg, #f8c6d4, #a6d8f0);
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  color: #333;
+  border-top: 2px solid #fff;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.5em;
+  }
+  nav ul {
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+
+
+   
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe6ec, #cdeaff);
+  color: #333;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+/* ====== HEADER (UTAMA, DIPAKAI SEMUA HALAMAN) ====== */
+header {
+  background: linear-gradient(90deg, #f8c6d4, #a6d8f0);
+  padding: 50px 20px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 25px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+header .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.3em;
+  margin: 15px 0 5px;
+  color: #333;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+header p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  margin: 40px auto;
+  background: linear-gradient(135deg, #fcd6e8, #c8e4f7);
+  padding: 60px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 900px;
+}
+
+.hero h2 {
+  font-size: 28px;
+  color: #444;
+}
+
+.hero p {
+  font-size: 17px;
+  color: #555;
+  max-width: 700px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: linear-gradient(90deg, #f8c6d4, #a6d8f0);
+  padding: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}                                                                                                                                                                    /* ==========================================================
+ /* ====== KARTU SISWA ====== */
+.card {
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px var(--shadow);
+  text-align: center;
+  padding: 20px 15px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 3px dashed #ffd6e8;
+}
+
+.card::before {
+  content: "🌷";
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  font-size: 22px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #b7e6ff;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fcd6e8;
+  box-shadow: 0 3px 8px var(--shadow);
+  background-color: var(--blue-soft);
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  margin: 8px 0 4px;
+  font-size: 1.05em;
+  color: #333;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* 🌸 STRUKTUR KELAS XI RPL — TEMA PINK & BLUE SOFT 🌷 */
+.struktur {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Baris wali kelas */
+.baris-wali {
+  display: flex;
+  justify-content: center; /* Foto di tengah */
+  gap: 20px;
+}
+
+/* Baris guru (4 kolom sekarang) */
+.baris-guru {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Sebelumnya 3, sekarang 4 */
+  justify-items: center;
+  gap: 30px;
+}
+
+/* Baris petugas kelas / sekretaris / bendahara / kebersihan */
+.baris-petugas,
+.baris-sekretaris,
+.baris-bendahara,
+.baris-kebersihan {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Card tetap sama */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px;
+  transition: 0.3s;
+  border-top: 4px solid #ffb6c1;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #87cefa;
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffd6e8;
+}
+
+.card h3 {
+  margin-top: 10px;
+  color: #444;
+}
+
+.card .jabatan {
+  background: #ffe6f2;
+  color: #ff5fa2;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+
+ /* ==========================================================
+   💫 DAFTAR SISWA — CUTE GRID EDITION
+   ========================================================== */
+body {
+  background: linear-gradient(135deg, #ffeef6, #d2f1ff);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+/* ====== HEADER (SAMA DENGAN BERANDA) ====== */
+header {
+  background: linear-gradient(90deg, #f8c6d4, #a6d8f0);
+  padding: 50px 20px;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 25px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+header .logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+header h1 {
+  font-size: 2.3em;
+  margin: 15px 0 5px;
+  color: #333;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+header p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* ====== SISWA GRID ====== */
+.siswa-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: linear-gradient(180deg, #fff, #fce4ec);
+}
+
+.card img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fcd6e8;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  color: #444;
+}      
+
+
+
+/* ====== JADWAL PIKET ====== */
+.piket-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 10%;
+}
+
+.piket-card {
+  background: #ffffffb0;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.piket-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* ===== WARNA KARTU HARI ===== */
+.senin { border-color: #f8c6d4; background: #fdf4f7; }
+.selasa { border-color: #a6d8f0; background: #f3faff; }
+.rabu { border-color: #f8d9e0; background: #fff8fa; }
+.kamis { border-color: #b5e3f3; background: #f7fcff; }
+.jumat { border-color: #f7b9cb; background: #fff3f6; }
+
+.piket-card h2 {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.piket-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.piket-card li {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 8px auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+                                                                                                                                                                      
+/* ====== TABEL JADWAL PELAJARAN ====== */
+.jadwal {
+  padding: 40px 5%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  text-align: center;
+}
+
+thead th {
+  background: linear-gradient(135deg, #f8c6d4, #a6d8f0);
+  color: #333;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0;
+}
+
+tbody tr {
+  background-color: #ffffff;
+  box-shadow: 0 3px 8px var(--shadow);
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  transform: scale(1.01);
+  background-color: #fdf6f9;
+}
+
+td {
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.break {
+  background-color: #ffeef4;
+  color: #ff69b4;
+  font-weight: bold;
+}                                                                                                                                                         /* ==========================================================
+/* ====== PRESTASI ====== */
+.prestasi-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.prestasi-group {
+  margin-bottom: 50px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px var(--shadow);
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.prestasi-group:hover { transform: scale(1.01); }
+
+.prestasi-group h2 {
+  color: #ff69b4;
+  text-align: center;
+}
+
+.prestasi-group p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.prestasi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.prestasi-row .card {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 18px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white),
+                    linear-gradient(135deg, #f8c6d4, #a6d8f0);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.prestasi-row .card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  background-image: linear-gradient(white, white),
+                    linear-gradient(135deg, #f7b9cb, #b3e5fc);
+}
+
+.prestasi-row .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: opacity 0.4s ease;
+}
+
+.prestasi-row .card:hover img { opacity: 0.7; }
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  background: rgba(255,192,203,0.4);
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  font-size: 14px;
+  background: linear-gradient(90deg, #f8c6d4, #a6d8f0);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -2px 10px var(--shadow);
+  font-weight: 600;
+  color: #444;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  header h1 { font-size: 1.6em; }
+  .card img { width: 90px; height: 90px; }
+  .siswa-container { gap: 20px; }
+  .piket-card { padding: 15px; }
+  .hero h1 { font-size: 22px; }
+  .prestasi-row .card { width: 170px; height: 170px; }
+  table { font-size: 12px; }
+  thead th, td { padding: 8px; }
+}
+/* ====== NAVBAR CENTER & HIASAN LUCU ====== */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
+  position: relative;
+}
+
+/* Tambahkan hiasan kiri & kanan navbar */
+nav::before,
+nav::after {
+  content: "🌸🍒";
+  font-size: 1.8em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav::before { left: 20px; }
+nav::after { right: 20px; }
+
+/* ====== NAV LIST ====== */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* ====== NAV BUTTON STYLE ====== */
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ffc0cb, #a0e7ff); /* soft pink & soft blue */
+  color: #003366;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  font-size: 0.95rem;
+}
+
+/* Efek hover lembut */
+nav ul li a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #ffb6c1, #90d4f0); /* lebih cerah saat hover */
+}
+
+/* ====== GARIS PUTIH DI BAWAH SAAT HOVER ====== */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.7);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ====== TAMBAH HIASAN TIAP TOMBOL ====== */
+nav ul li a::before {
+  content: "🌸";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "🍒";
+  position: absolute;
+  right: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* Saat hover hiasan membesar & makin terang */
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  transform: translateY(-50%) scale(1.3);
+  opacity: 1;
+}
